@@ -5,12 +5,18 @@
     --primary-color: #8f0000;
     --details-color: #000000;
     --background-color: #ffffff;
+
+    --top-bar-height: 4.5rem;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    color: var(--details-color);
 }
 
 menu , li {
@@ -22,10 +28,10 @@ a {
     text-decoration: inherit;
 }
 
-
 /* HEADER */
 header {
-    padding-top: 4.5rem;
+    padding-top: var(--top-bar-height);
+    min-height: var(--top-bar-height);
 }
 
 /* Navigation Bar */
@@ -33,7 +39,7 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 4.5rem;
+    height: var(--top-bar-height);
     color: var(--primary-color);
     background-color: var(--background-color);
     box-shadow: .25rem 0 0.125rem #00000080;
@@ -84,3 +90,26 @@ header {
 }
 
 /* MAIN */
+section {
+    width: 90%;
+    min-height: calc((100vh - var(--top-bar-height)) * 0.8);
+    max-width: 45rem;
+    margin: calc((100vh - var(--top-bar-height)) * 0.1) auto 0;
+    padding: 1.25rem;
+    border-radius: 2.5rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+section p {
+    font-size: 1.75rem;
+}
+
+section strong {
+    font-size: 4rem;
+    color: var(--background-color);
+}

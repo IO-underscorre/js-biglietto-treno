@@ -11,4 +11,6 @@ let ticketPrice = Math.round(((travelDistance * pricePerKm * discountedPricePct)
 // Print and log
 console.log(ticketPrice)
 
+document.getElementById("travel-distance").innerHTML = travelDistance;
+document.getElementById("user-age").innerHTML = userAge;
 document.getElementById("ticket-price").innerHTML = ticketPrice;
